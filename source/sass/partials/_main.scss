@@ -19,4 +19,8 @@
 	width: 100%;
 	padding: 8px 0;
 	margin-bottom: 20px;
+	outline: none;
+	&:focus {
+		box-shadow: 1px 1px 20px $focusInput;
+	}
 }
