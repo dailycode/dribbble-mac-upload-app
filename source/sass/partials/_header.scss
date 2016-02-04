@@ -1,7 +1,10 @@
 .upload {
-	background: url('../img/icon-dribbble.png') no-repeat -100px $bgUpload;
+	background: url('../img/icon-dribbble.png') no-repeat -88px -25px $bgUpload;
+	background-size: cover;
+	border-radius: 0 0 55% 55%/0 0 15% 15%; 
 	text-align: center;
-	padding: 5.9rem 0;
+	padding: 3.9rem 0;
+	box-shadow: -4px 15px 20px rgba(0,0,0,.2);
 }
 
 .title_upload {
