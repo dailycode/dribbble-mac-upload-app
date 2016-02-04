@@ -1,1 +1,1 @@
-# dribbble-mac-upload-app
+# Dribble mac upload app - Redesign front-end only
