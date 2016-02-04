@@ -1,17 +1,19 @@
 .navbar{
-	height: 30px;
+	height: 40px;
 	background: rgba(255, 255, 255, 0.59);
-	position: relative;
-}
+	overflow: hidden;
 
+	.main {
+		margin: 0 auto;
+	}
+}
 .icon{
-	position: absolute;
-	left: 48%;
-	margin-top: 3px;
+	margin: 3px auto;
+	display: block;
 }
 .upload {
-	background: url('../img/icon-dribbble.png') no-repeat -88px -25px $bgUpload;
-	background-size: cover;
+	background: url("../img/teste.png") no-repeat left center #ea4c89;
+	background-size: contain;
 	border-radius: 0 0 55% 55%/0 0 15% 15%; 
 	text-align: center;
 	padding: 3.9rem 0;

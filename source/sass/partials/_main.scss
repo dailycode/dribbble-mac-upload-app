@@ -1,6 +1,6 @@
 .main{
 	width: $widthMain;
-	margin: 30px auto;
+	margin: 40px auto;
 }
 
 .send {
@@ -10,13 +10,13 @@
 	&:before {
 		content: '';
 		position: absolute;
-		left: 41.3%;
-		top: -19px;
+		left: 45%;
+		top: -27px;
 		width: 0;
 		height: 0;
-		border-left: 26px solid transparent; 
-		border-right: 26px solid transparent; 
-		border-bottom: 26px solid #D8467E; 
+		border-left: 30px solid transparent; 
+		border-right: 30px solid transparent; 
+		border-bottom: 30px solid #D8467E; 
 	}
 }
 
