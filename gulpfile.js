@@ -4,7 +4,8 @@ var gulp 					= require('gulp'),
 		autoprefixer 	= require('gulp-autoprefixer'),
 		uglify 				= require('gulp-uglify'),
 		imagemin			= require('gulp-imagemin'),
-		concat 				= require('gulp-concat');
+		concat 				= require('gulp-concat'),
+		ghPages				= require('gulp-gh-pages');
 
 gulp.task('browser-sync', function(){
 	browserSync.init({
@@ -50,6 +51,11 @@ gulp.task('imagemin', function(){
 gulp.task('fonts', function(){
 	gulp.src('source/fonts/**/*')
 		.pipe(gulp.dest('./public/app/fonts'));
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./public/**/*')
+    .pipe(ghPages());
 });
 
 gulp.task('watch', function() {
