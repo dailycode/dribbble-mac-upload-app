@@ -5,7 +5,8 @@ var gulp 					= require('gulp'),
 		uglify 				= require('gulp-uglify'),
 		imagemin			= require('gulp-imagemin'),
 		concat 				= require('gulp-concat'),
-		minifyHTML 		= require('gulp-minify-html');
+		minifyHTML 		= require('gulp-minify-html'),
+		deploy      	= require('gulp-gh-pages');
 
 gulp.task('browser-sync', function(){
 	browserSync.init({
@@ -58,6 +59,11 @@ gulp.task('minify-html', function(){
 		.pipe(minifyHTML({empty: true}))
 		.pipe(gulp.dest('./public'))
 		.pipe(browserSync.stream());
+});
+
+gulp.task('deploy', function () {
+  gulp.src("./public/**/*")
+    .pipe(deploy())
 });
 
 gulp.task('watch', function() {
