@@ -1,11 +1,4 @@
 //----------------------------------*\
-// SCSS MIXINS
-//----------------------------------*/
-
-@import 'mixins/_position.scss';
-@import 'mixins/_selection.scss';
-
-//----------------------------------*\
 // CONFIG MODULES
 //----------------------------------*/
 
@@ -19,10 +12,7 @@
 //----------------------------------*/
 
 @import 'partials/_header.scss';
-@import 'partials/_nav.scss';
-@import 'partials/_sidebar.scss';
 @import 'partials/_main.scss';
-@import 'partials/_footer.scss';
 
 //----------------------------------*\
 // OBJECTS & MODULES
@@ -30,14 +20,10 @@
 
 @import 'modules/_buttons.scss';
 @import 'modules/_inputs.scss';
-@import 'modules/_lists.scss';
 @import 'modules/_typography.scss';
-@import 'modules/_misc.scss';
-@import 'modules/_app.scss';
 
 // Enhancement modules
 @import 'modules/_breakpoints.scss';
-@import 'modules/_print.scss';
 
 //----------------------------------*\
 // VENDOR

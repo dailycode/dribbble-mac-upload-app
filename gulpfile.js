@@ -5,7 +5,7 @@ var gulp 					= require('gulp'),
 		uglify 				= require('gulp-uglify'),
 		imagemin			= require('gulp-imagemin'),
 		concat 				= require('gulp-concat'),
-		ghPages				= require('gulp-gh-pages');
+		minifyHTML 		= require('gulp-minify-html');
 
 gulp.task('browser-sync', function(){
 	browserSync.init({
@@ -53,9 +53,11 @@ gulp.task('fonts', function(){
 		.pipe(gulp.dest('./public/app/fonts'));
 });
 
-gulp.task('deploy', function() {
-  return gulp.src('./public/**/*')
-    .pipe(ghPages());
+gulp.task('minify-html', function(){
+	gulp.src('source/*.html')
+		.pipe(minifyHTML({empty: true}))
+		.pipe(gulp.dest('./public'))
+		.pipe(browserSync.stream());
 });
 
 gulp.task('watch', function() {
@@ -63,7 +65,7 @@ gulp.task('watch', function() {
 	gulp.watch('source/js/**/*.js', ['js']);
 	gulp.watch('source/img/**/*', ['imagemin']);
 	gulp.watch('source/fonts/**/*', ['fonts']);
-	gulp.watch('public/*.html').on('change', browserSync.reload);
+	gulp.watch('source/*.html', ['minify-html']);
 });
 
 gulp.task('default', ['browser-sync', 'watch', 'imagemin', 'fonts']);
